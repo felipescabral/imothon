@@ -7,7 +7,8 @@ import MySQLdb
 
 app = Flask(__name__)
 
-con = MySQLdb.connect('54.207.12.211','root','root','imothon')
+con = MySQLdb.connect('54.207.5.187','root','r00t','imothon')
+con.autocommit(True)
 
 
 @app.route("/imothon")
@@ -20,10 +21,11 @@ def add_entry():
 	idade = request.form['idade']
 	sexo = request.form['sexo']
 
+
 	cursor = con.cursor()
 	cursor.execute('insert into pessoas (nome,tel_comercial,sexo) values (%s, %s, %s)', [nome, idade, sexo])
-	con.commit()
-	return "Dados contratados com sucesso no sistema!!!!"
+	#con.commit()
+	return "<script> alert('Dados contratados com sucesso no sistema!!!!'); window.location = '../imothon'; </script>"
 
 @app.route('/pessoas/')
 def listar_pessoas():
