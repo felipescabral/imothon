@@ -10,7 +10,7 @@ class Singleton(object):
         return cls._instance
 
 
-class ImoveisDao(Singleton):
+class AdministradoresDao(Singleton):
     def __init__(self):
         """
         Inits MySQL connection
@@ -41,11 +41,11 @@ class ImoveisDao(Singleton):
         return self.connection.cursor()
 
 
-    def insertImovel(self, cliente_id, endereco_id, valor, metragem,  quartos, vagas_garagem, valor_iptu, valor_condominio, descricao):
-        try:
-            query = "INSERT INTO imoveis (`cliente_id`, `endereco_id`, `valor`, `metragem`,  `quartos`, `vagas_garagem`, `valor_iptu`, `valor_condominio`, `descricao`) VALUES ( %s , %s , %s , %s, %s, %s , %s , %s , %s )"
+    def insertAdministrador(self, corretor_id):
+        try:            
+            query = "INSERT INTO administradores (`corretor_id`) VALUES ( %s )"
             cursor = self._get_cursor()
-            cursor.execute(query,(cliente_id, endereco_id, valor, metragem,  quartos, vagas_garagem, valor_iptu, valor_condominio, descricao))
+            cursor.execute(query,(corretor_id))
             cursor.close()
         finally:
             self.close()
