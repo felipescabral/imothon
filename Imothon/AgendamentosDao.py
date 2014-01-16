@@ -43,7 +43,7 @@ class AgendamentosDao(Singleton):
 
     def insertAgendamento(self, imovel_id,corretor_id, cliente_id, data, observacoes):
         try:     
-            ##nada não       
+            ##nada no       
             query = " INSERT INTO agendamentos (`imovel_id`,`corretor_id`,`cliente_id`,`data`,`observacoes`) VALUES ( %s , %s , %s , %s, %s)"
             cursor = self._get_cursor()
             cursor.execute(query,(imovel_id,corretor_id, cliente_id, data, observacoes))
