@@ -7,7 +7,7 @@ import MySQLdb
 
 app = Flask(__name__)
 
-con = MySQLdb.connect('54.207.5.187','root','r00t','imothon')
+con = MySQLdb.connect('54.207.5.187','','','imothon')
 con.autocommit(True)
 
 

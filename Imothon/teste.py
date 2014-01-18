@@ -1,5 +1,5 @@
 import logging
-from cliente_dao import ClienteDao
+from ClienteDao.py import ClienteDao
 from ImoveisDao import ImoveisDao
 
 logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d/%m/%Y %H:%M:%S', filename='IMothon.log',level=logging.INFO)

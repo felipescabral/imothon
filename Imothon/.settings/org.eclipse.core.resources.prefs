@@ -1,9 +1,9 @@
 eclipse.preferences.version=1
 encoding/AdministradoresDao.py=utf8
 encoding/AgendamentosDao.py=utf8
+encoding/ClienteDao.py=utf8
 encoding/ImoveisDao.py=utf8
 encoding/agendamento.py=utf-8
 encoding/agendamento_ws.py=utf-8
-encoding/cliente_dao.py=utf8
 encoding/conexao_banco.py=utf-8
 encoding/index.py=utf-8
